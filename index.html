@@ -75,5 +75,81 @@
                 </ul>
             </div>
     </aside>
+    <article>
+        <img src="img/magnet.jpg" alt="Item">
+        <div>
+            <button>
+                <span>$ 10.00</span>
+                <img src="img/cart.svg" alt="cart">
+            </button>
+        </div>
+    </article>
+    <footer>
+        <div>
+            <span>&copy; 2019, Alina</span>
+        </div>
+        <div>
+            <ul>
+                <li>
+                    <a href="">About us</a>
+                </li>
+                <li>
+                    <a href="">Payment</a>
+                </li>
+                <li>
+                    <a href="">Delivery</a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+    <section>
+        <h2>Items</h2>
+        <div>
+            <div>
+                <div>
+                    <img src="img/magnet.jpg" alt="Item">
+                </div>
+                <div>art. 101022</div>
+                <div>
+                    <button type="button"><img src="img/delete.png" alt="Delete"></button>
+                </div>
+                <div>
+                    <input type="number">
+                </div>
+                <div>
+                    $10.00
+                </div>
+                <div>Total $150</div>
+                <div>
+                    <button type="button">Proceed to checkout</button>
+                </div>
+            </div>
+        </div>
+    </section>
+        <form action="https://formspree.io/mbjrpqkd" method="POST">
+        <div>
+            <h2>Personal Information</h2>
+        </div>
+        <div>
+            <label for="name">Full Name</label>
+            <input id="name" type="text" name="name" placeholder="i. e. John Doe" required>
+        </div>
+        <div>
+            <label for="number">Phone</label>
+            <input id="number" type="tel" name="phone" placeholder="required format +380 XX XXX XX XX" required>
+        </div>
+        <div>
+            <h2>Delivery</h2>
+        </div>
+        <div>
+            <input id="post" type="radio" name="post">
+            <label for="post">Post</label>
+        </div>
+        <div>
+            <input id="pickup" type="radio" name="post">
+            <label for="pickup">Pick-up point</label>
+        </div>
+            <button type="submit">Checkout</button>
+        </form>
 </body>
 </html>

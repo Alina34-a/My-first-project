@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Souvenir Store</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
@@ -18,10 +19,10 @@
             <span>The Best Lviv Souvenirs Are Here</span>
         </div>
         <div>
-            <a href="+380501111111">Phone</a>
+            <a href="tel:+380501111111">Phone</a>
         </div>
     </header>
-    <aside>
+    <aside id="filters">
         <h2>Filters</h2>
             <div>
                 <h3>Type</h3>
@@ -74,8 +75,13 @@
                     </li>
                 </ul>
             </div>
+            <div>
+                <button type="button">Apply Filters</button>
+            </div>
     </aside>
-    <article>
+    <main>
+    <div>
+        <div>art. 101022</div>
         <img src="img/magnet.jpg" alt="Item">
         <div>
             <button>
@@ -83,7 +89,8 @@
                 <img src="img/cart.svg" alt="cart">
             </button>
         </div>
-    </article>
+    </div>
+    </main>
     <footer>
         <div>
             <span>&copy; 2019, Alina</span>
@@ -103,7 +110,12 @@
         </div>
     </footer>
     <section>
+        <div>
         <h2>Items</h2>
+        <div>
+            <span>Continue Shopping</span>
+        </div>
+        </div>
         <div>
             <div>
                 <div>
@@ -119,17 +131,20 @@
                 <div>
                     $10.00
                 </div>
+            </div>
+            <div>
+                <div>
+                    <button type="button">Change Items</button>
+                </div>
                 <div>Total $150</div>
+            </div>
+        </div>
                 <div>
                     <button type="button">Proceed to checkout</button>
                 </div>
-            </div>
-        </div>
     </section>
         <form action="https://formspree.io/mbjrpqkd" method="POST">
-        <div>
-            <h2>Personal Information</h2>
-        </div>
+        <h2>Personal Information</h2>
         <div>
             <label for="name">Full Name</label>
             <input id="name" type="text" name="name" placeholder="i. e. John Doe" required>
@@ -138,12 +153,14 @@
             <label for="number">Phone</label>
             <input id="number" type="tel" name="phone" placeholder="required format +380 XX XXX XX XX" required>
         </div>
-        <div>
             <h2>Delivery</h2>
-        </div>
         <div>
             <input id="post" type="radio" name="post">
             <label for="post">Post</label>
+        </div>
+        <div>
+            <label for="address">Address</label>
+            <input id="address" type="text" name="address">
         </div>
         <div>
             <input id="pickup" type="radio" name="post">

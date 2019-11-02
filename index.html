@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
+    <header id="header">
         <div>
             <a href="index.html" title="Souvenirs Store">
                 <img src="img/coffee.png" alt="Main Page">
@@ -22,8 +22,9 @@
             <a href="tel:+380501111111">Phone</a>
         </div>
     </header>
-    <aside id="filters">
-        <h2>Filters</h2>
+    <div id="page">
+        <aside id="filters">
+            <h2>Filters</h2>
             <div>
                 <h3>Type</h3>
                 <ul>
@@ -78,20 +79,21 @@
             <div>
                 <button type="button">Apply Filters</button>
             </div>
-    </aside>
-    <main>
-    <div>
-        <div>art. 101022</div>
-        <img src="img/magnet.jpg" alt="Item">
-        <div>
-            <button>
-                <span>$ 10.00</span>
-                <img src="img/cart.svg" alt="cart">
-            </button>
-        </div>
+        </aside>
+        <main id="content">
+            <div class="item">
+                <div>art. 101022</div>
+                <img src="img/test.jpg" alt="Item">
+                <div>
+                    <button>
+                        <span>$ 10.00</span>
+                        <img src="img/cart.svg" alt="cart">
+                    </button>
+                </div>
+            </div>
+        </main>
     </div>
-    </main>
-    <footer>
+    <footer id="footer">
         <div>
             <span>&copy; 2019, Alina</span>
         </div>
@@ -109,64 +111,68 @@
             </ul>
         </div>
     </footer>
-    <section>
+    <section id="order">
         <div>
-        <h2>Items</h2>
-        <div>
-            <span>Continue Shopping</span>
-        </div>
+            <form action="https://formspree.io/mbjrpqkd" method="POST">
+                <h2>Personal Information</h2>
+                <div>
+                    <label for="name">Full Name</label>
+                    <input id="name" type="text" name="name" placeholder="i. e. John Doe" required>
+                </div>
+                <div>
+                    <label for="number">Phone</label>
+                    <input id="number" type="tel" name="phone" placeholder="required format +380 XX XXX XX XX" required>
+                </div>
+                <h2>Delivery</h2>
+                <div>
+                    <input id="post" type="radio" name="post">
+                    <label for="post">Post</label>
+                </div>
+                <div>
+                    <label for="address">Address</label>
+                    <input id="address" type="text" name="address">
+                </div>
+                <div>
+                    <input id="pickup" type="radio" name="post">
+                    <label for="pickup">Pick-up point</label>
+                </div>
+                <button type="submit">Checkout</button>
+            </form>
         </div>
         <div>
             <div>
+                <h2>Items</h2>
                 <div>
-                    <img src="img/magnet.jpg" alt="Item">
-                </div>
-                <div>art. 101022</div>
-                <div>
-                    <button type="button"><img src="img/delete.png" alt="Delete"></button>
-                </div>
-                <div>
-                    <input type="number">
-                </div>
-                <div>
-                    $10.00
+                    <span>Continue Shopping</span>
                 </div>
             </div>
             <div>
                 <div>
-                    <button type="button">Change Items</button>
+                    <div>
+                        <img src="img/magnet.jpg" alt="Item">
+                    </div>
+                    <div>art. 101022</div>
+                    <div>
+                        <button type="button"><img src="img/delete.png" alt="Delete"></button>
+                    </div>
+                    <div>
+                        <input type="number">
+                    </div>
+                    <div>
+                        $10.00
+                    </div>
                 </div>
-                <div>Total $150</div>
+                <div>
+                    <div>
+                        <button type="button">Change Items</button>
+                    </div>
+                    <div>Total $150</div>
+                </div>
+            </div>
+            <div>
+                <button type="button">Proceed to checkout</button>
             </div>
         </div>
-                <div>
-                    <button type="button">Proceed to checkout</button>
-                </div>
     </section>
-        <form action="https://formspree.io/mbjrpqkd" method="POST">
-        <h2>Personal Information</h2>
-        <div>
-            <label for="name">Full Name</label>
-            <input id="name" type="text" name="name" placeholder="i. e. John Doe" required>
-        </div>
-        <div>
-            <label for="number">Phone</label>
-            <input id="number" type="tel" name="phone" placeholder="required format +380 XX XXX XX XX" required>
-        </div>
-            <h2>Delivery</h2>
-        <div>
-            <input id="post" type="radio" name="post">
-            <label for="post">Post</label>
-        </div>
-        <div>
-            <label for="address">Address</label>
-            <input id="address" type="text" name="address">
-        </div>
-        <div>
-            <input id="pickup" type="radio" name="post">
-            <label for="pickup">Pick-up point</label>
-        </div>
-            <button type="submit">Checkout</button>
-        </form>
 </body>
 </html>

@@ -17,17 +17,14 @@ ul {
     height: calc(100% - 55px);
 }
 #header {
-    background-color: rgba(214, 127, 214, 0.719);
     display: flex;
     width: 100%;
     justify-content: space-between;
 }
 #filters {
-    background-color: rgba(179, 51, 51, 0.541);
     flex-basis: 25%;
 }
 #content {
-    background-color: aquamarine;
     flex-basis: 75%;
 }
 .item {
@@ -56,7 +53,6 @@ ul {
     display: none;
 }
 #footer {
-    background-color: rgba(72, 224, 72, 0.699);
     width: 100%;
     flex-direction: row;
     flex-basis: 100%;

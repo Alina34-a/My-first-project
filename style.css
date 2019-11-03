@@ -31,12 +31,26 @@ ul {
     flex-basis: 75%;
 }
 .item {
+    width: 150px;
+    height: 224px;
 }
 .item > img {
     max-width: 200px;
     max-height: 200px;
     width: 100%;
     height: auto;
+}
+.item > button {
+    display: block;
+    color: white;
+    background-color: red;
+    border: none;
+    width: 90px;
+    height: 24px;
+}
+.item > button > img {
+    width: 20px;
+    height: 20px;
 }
 #order {
     display: none;

@@ -1,6 +1,8 @@
 html, body {
     margin: 0;
     padding: 0;
+    width: 100%;
+    height: 100%;
 }
 h1, h2, h3 {
     margin: 0;
@@ -10,22 +12,25 @@ ul {
 }
 #page {
     display: flex;
-    
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: calc(100% - 55px);
 }
 #header {
     background-color: rgba(214, 127, 214, 0.719);
+    display: flex;
     width: 100%;
+    justify-content: space-between;
 }
 #filters {
     background-color: rgba(179, 51, 51, 0.541);
-    width: 25%;
+    flex-basis: 25%;
 }
 #content {
     background-color: aquamarine;
-    width: 75%;
+    flex-basis: 75%;
 }
 .item {
-
 }
 .item > img {
     max-width: 200px;
@@ -39,4 +44,6 @@ ul {
 #footer {
     background-color: rgba(72, 224, 72, 0.699);
     width: 100%;
+    flex-direction: row;
+    flex-basis: 100%;
 }

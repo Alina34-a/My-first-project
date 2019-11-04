@@ -10,6 +10,14 @@ h1, h2, h3 {
 ul {
     margin: 0;
 }
+button.primary {
+    display: block;
+    color: white;
+    background-color: red;
+    border: none;
+    width: 90px;
+    height: 24px;
+}
 #page {
     display: flex;
     flex-direction: row;
@@ -23,9 +31,11 @@ ul {
 }
 #filters {
     flex-basis: 25%;
+    min-height: calc(100% - 70px);
 }
 #content {
     flex-basis: 75%;
+    min-height: calc(100% - 70px);
 }
 .item {
     width: 150px;
@@ -38,22 +48,26 @@ ul {
     height: auto;
 }
 .item > button {
-    display: block;
-    color: white;
-    background-color: red;
-    border: none;
-    width: 90px;
-    height: 24px;
+
 }
 .item > button > img {
     width: 20px;
     height: 20px;
 }
 #order {
-    display: none;
+    position: fixed;
+    right: 0;
+    height: calc(100% - 125px);
+    width: 30%;
+    top: 55px;
+    max-height: calc(100% - 125px);
+    overflow-y: auto;
 }
 #footer {
     width: 100%;
     flex-direction: row;
     flex-basis: 100%;
+    display: flex;
+    justify-content: space-between;
+    height: 70px
 }

@@ -1,0 +1,112 @@
+[
+  {
+    "id": 101,
+    "name": "Magnet #1",
+    "price": 10,
+    "image": "img/magnet.jpg",
+    "tags": [
+      "Magnets",
+      "Silver",
+      "Ivano-Frankivsk"
+    ]
+  },
+  {
+    "id": 102,
+    "name": "Magnet #2",
+    "price": 15,
+    "image": "img/magnet.jpg",
+    "tags": [
+      "Wooden products",
+      "Blue",
+      "Lviv"
+    ]
+  },
+  {
+    "id": 103,
+    "name": "Magnet #3",
+    "price": 20,
+    "image": "img/magnet.jpg",
+    "tags": [
+      "Glass products",
+      "Yellow",
+      "Ivano-Frankivsk"
+    ]
+  },
+  {
+    "id": 104,
+    "name": "Magnet #4",
+    "price": 25,
+    "image": "img/magnet.jpg",
+    "tags": [
+      "Handmade",
+      "Silver",
+      "Carpathians"
+    ]
+  },
+  {
+    "id": 105,
+    "name": "Magnet #5",
+    "price": 30,
+    "image": "img/magnet.jpg",
+    "tags": [
+      "Aroma gifts",
+      "Blue",
+      "Ivano-Frankivsk"
+    ]
+  },
+  {
+    "id": 106,
+    "name": "Magnet #6",
+    "price": 35,
+    "image": "img/magnet.jpg",
+    "tags": [
+      "Pictures from Lviv",
+      "Yellow",
+      "Carpathians"
+    ]
+  },
+  {
+    "id": 107,
+    "name": "Magnet #7",
+    "price": 40,
+    "image": "img/magnet.jpg",
+    "tags": [
+      "A cup from Lviv",
+      "Blue",
+      "Ivano-Frankivsk"
+    ]
+  },
+  {
+    "id": 108,
+    "name": "Magnet #8",
+    "price": 45,
+    "image": "img/magnet.jpg",
+    "tags": [
+      "T-shirts",
+      "Yellow",
+      "Lviv"
+    ]
+  },
+  {
+    "id": 109,
+    "name": "Magnet #9",
+    "price": 50,
+    "image": "img/magnet.jpg",
+    "tags": [
+      "Ceramics",
+      "Gold",
+      "Lviv"
+    ]
+  },
+  {
+    "id": 110,
+    "name": "Magnet #10",
+    "price": 55,
+    "image": "img/magnet.jpg",
+    "tags": [
+      "T-shirts",
+      "Gold",
+      "Ivano-Frankivsk"
+    ]
+  }
+]

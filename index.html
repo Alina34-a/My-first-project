@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Souvenirs Store</title>
-    <link rel="shortcut icon" type="image/png" href="/favicon.png"/>
+    <link rel="shortcut icon" type="image/png" href="favicon.png"/>
     <link rel="stylesheet" href="style.css">
     <script src="scripts.js" defer></script>
 </head>
@@ -23,70 +23,121 @@
             <h1>Souvenirs Store</h1>
             <span>The best Lviv souvenirs are here</span>
         </div>
-        <div id="order-cart">
-            <img src="img/order-cart.svg" alt="Cart">
-            <span>12</span>
-        </div>
         <div id="page-header-phone">
             <a class="phone" href="tel:+380501111111">+380501111111</a>
+        </div>
+        <div id="order-cart">
+            <img src="img/order-cart.svg" alt="Cart">
+            <span id="order-cart-counter">0</span>
         </div>
     </header>
     <div id="page">
         <aside id="filters">
             <div id="filters-wrapper">
                 <h2>Filters</h2>
-                <div>
-                    <h3>Type</h3>
-                    <ul>
-                        <li>
-                            <input id="magnets" type="checkbox" name="magnets">
-                            <label for="magnets">Magnets</label>
-                        </li>
-                        <li>
-                            <input id="magnets1" type="checkbox" name="magnets">
-                            <label for="magnets1">Magnets</label>
-                        </li>
-                        <li>
-                            <input id="magnets2" type="checkbox" name="magnets">
-                            <label for="magnets2">Magnets</label>
-                        </li>
-                    </ul>
+                <div id="filters-options">
+                    <div>
+                        <h3>Type</h3>
+                        <ul>
+
+                            <li>
+                                <input id="tag-Wooden products" data-tag="Wooden products" type="checkbox">
+                                <label for="tag-Wooden products">Wooden products</label>
+                            </li>
+
+                            <li>
+                                <input id="tag-Ceramics" data-tag="Ceramics" type="checkbox">
+                                <label for="tag-Ceramics">Ceramics</label>
+                            </li>
+
+                            <li>
+                                <input id="tag-Magnets" data-tag="Magnets" type="checkbox">
+                                <label for="tag-Magnets">Magnets</label>
+                            </li>
+
+                            <li>
+                                <input id="tag-Glass products" data-tag="Glass products" type="checkbox">
+                                <label for="tag-Glass products">Glass products</label>
+                            </li>
+
+                            <li>
+                                <input id="tag-Handmade" data-tag="Handmade" type="checkbox">
+                                <label for="tag-Handmade">Handmade</label>
+                            </li>
+
+                            <li>
+                                <input id="tag-Aroma gifts" data-tag="Aroma gifts" type="checkbox">
+                                <label for="tag-Aroma gifts">Aroma gifts</label>
+                            </li>
+
+                            <li>
+                                <input id="tag-Pictures from Lviv" data-tag="Pictures from Lviv" type="checkbox">
+                                <label for="tag-Pictures from Lviv">Pictures from Lviv</label>
+                            </li>
+
+                            <li>
+                                <input id="tag-A cup from Lviv" data-tag="A cup from Lviv" type="checkbox">
+                                <label for="tag-A cup from Lviv">A cup from Lviv</label>
+                            </li>
+
+                            <li>
+                                <input id="tag-T-shirts" data-tag="T-shirts" type="checkbox">
+                                <label for="tag-T-shirts">T-shirts</label>
+                            </li>
+
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h3>Color</h3>
+                        <ul>
+
+                            <li>
+                                <input id="tag-Gold" data-tag="Gold" type="checkbox">
+                                <label for="tag-Gold">Gold</label>
+                            </li>
+
+                            <li>
+                                <input id="tag-Silver" data-tag="Silver" type="checkbox">
+                                <label for="tag-Silver">Silver</label>
+                            </li>
+
+                            <li>
+                                <input id="tag-Yellow" data-tag="Yellow" type="checkbox">
+                                <label for="tag-Yellow">Yellow</label>
+                            </li>
+
+                            <li>
+                                <input id="tag-Blue" data-tag="Blue" type="checkbox">
+                                <label for="tag-Blue">Blue</label>
+                            </li>
+
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h3>Origin</h3>
+                        <ul>
+
+                            <li>
+                                <input id="tag-Lviv" data-tag="Lviv" type="checkbox">
+                                <label for="tag-Lviv">Lviv</label>
+                            </li>
+
+                            <li>
+                                <input id="tag-Ivano-Frankivsk" data-tag="Ivano-Frankivsk" type="checkbox">
+                                <label for="tag-Ivano-Frankivsk">Ivano-Frankivsk</label>
+                            </li>
+
+                            <li>
+                                <input id="tag-Carpathians" data-tag="Carpathians" type="checkbox">
+                                <label for="tag-Carpathians">Carpathians</label>
+                            </li>
+
+                        </ul>
+                    </div>
                 </div>
-                <div>
-                    <h3>Type</h3>
-                    <ul>
-                        <li>
-                            <input id="magnets3" type="checkbox" name="magnets">
-                            <label for="magnets3">Magnets</label>
-                        </li>
-                        <li>
-                            <input id="magnets4" type="checkbox" name="magnets">
-                            <label for="magnets4">Magnets</label>
-                        </li>
-                        <li>
-                            <input id="magnets5" type="checkbox" name="magnets">
-                            <label for="magnets5">Magnets</label>
-                        </li>
-                    </ul>
-                </div>
-                <div>
-                    <h3>Type</h3>
-                    <ul>
-                        <li>
-                            <input id="magnets6" type="checkbox" name="magnets">
-                            <label for="magnets6">Magnets</label>
-                        </li>
-                        <li>
-                            <input id="magnets7" type="checkbox" name="magnets">
-                            <label for="magnets7">Magnets</label>
-                        </li>
-                        <li>
-                            <input id="magnets8" type="checkbox" name="magnets">
-                            <label for="magnets8">Magnets</label>
-                        </li>
-                    </ul>
-                </div>
-                <button type="button" class="primary">Apply Filters</button>
+                <button id="apply-filters" type="button" class="primary">Apply Filters</button>
             </div>
         </aside>
         <div id="filters-overlay"></div>

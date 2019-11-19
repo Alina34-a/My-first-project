@@ -70,10 +70,10 @@ body > header {
     margin: 0 0 0 16px;
 }
 #logo {
-    margin: 0 0 0 16px;
+    margin: 0 16px;
 }
 #page-header-phone {
-    margin: 0 16px 0 0;
+    margin: 0 16px 0 auto;
 }
 a.phone {
     color: rgb(65, 62, 62);
@@ -89,6 +89,28 @@ a.phone:active {
     color: red;
     border-color: red;
 }
+#order-cart {
+    margin: 0 16px;
+    position: relative;
+}
+#order-cart > img {
+    width: 30px;
+    height: 30px;
+}
+#order-cart > span {
+    background: red;
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 12px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    overflow: hidden;
+    color: #fff;
+    text-align: center;
+    line-height: 16px;
+}
 #filters {
     flex-basis: 25%;
     min-height: calc(100% - 70px);
@@ -97,22 +119,26 @@ a.phone:active {
     box-sizing: border-box;
     max-width: 220px;
 }
+#filters-wrapper {
+    padding: 0 0 35px 0;
+}
 #filters-wrapper > h2 {
     margin: 12px 0 0;
 }
-#filters-wrapper > div > h3 {
+#filters-options > div > h3 {
     border-bottom: 1px solid #616161;
     display: block;
     width: 100%;
     padding: 0 0 8px 0;
     margin: 12px 0;
 }
-#filters-wrapper > div > ul {
+#filters-options > div > ul {
     list-style: none;
     padding: 0;
 }
-#filters-wrapper > button {
+#apply-filters {
     margin: 12px auto 0;
+    background: rgb(233, 36, 36);
 }
 #filters-overlay {
     display: none;
@@ -143,6 +169,7 @@ a.phone:active {
     height: 224px;
     transition: box-shadow .2s ease;
     padding: 12px 4px 0;
+    position: relative;
     text-align: center;
 }
 .item:hover {
@@ -151,7 +178,9 @@ a.phone:active {
 .item .article {
     color: #4b4545;
     font-size: 10px;
-    margin-left: 12px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
 }
 .item > img {
     max-width: 200px;
@@ -170,6 +199,31 @@ a.phone:active {
     position: absolute;
     right: 8px;
     top: 6px;
+}
+.item .in-cart {
+    display: none;
+    font-size: 12px;
+    background-color: rgba(238, 238, 238, 0.7);
+    width: auto;
+    border-radius: 5px 0 0 5px;
+    line-height: 16px;
+    position: absolute;
+    top: 50px;
+    margin: 0 auto;
+    right: 0;
+    padding: 4px 10px;
+    justify-content: space-around;
+    align-items: center;
+    user-select: none;
+}
+.item .in-cart.active {
+    display: block;
+}
+.item .in-cart:hover div:last-child {
+    display: block;
+}
+.item .in-cart div:last-child:hover {
+    text-decoration: none;
 }
 #order {
     display: none;
@@ -273,33 +327,14 @@ a.phone:active {
     body {
         padding-top: 38px;
     }
+    #order-cart {
+        margin-left: auto;
+    }
     #page-header-phone, #logo, #page-title > span {
         display: none;
     }
     #page-header {
         justify-content: flex-start;
-    }
-    #order-cart {
-        margin: 0 16px 0 auto;
-        position: relative;
-    }
-    #order-cart > img {
-        width: 30px;
-        height: 30px;
-    }
-    #order-cart > span {
-        background: red;
-        position: absolute;
-        top: 0;
-        right: 0;
-        font-size: 12px;
-        width: 16px;
-        height: 16px;
-        border-radius: 50%;
-        overflow: hidden;
-        color: #fff;
-        text-align: center;
-        line-height: 16px;
     }
     #filters {
         display: none;
@@ -347,7 +382,7 @@ a.phone:active {
     }
 }
 @media only screen and (min-width: 570px) {
-    #menu, #order-cart {
+    #menu {
         display: none;
     }
     #filters-wrapper {

@@ -153,36 +153,37 @@
             <div>
                 <ul>
                     <li>
-                        <a href="">About us</a>
+                        <a href="#" class="show-info" data-info="about-us">About us</a>
                     </li>
                     <li>
-                        <a href="">Payment</a>
+                        <a href="#" class="show-info" data-info="payment">Payment</a>
                     </li>
                     <li>
-                        <a href="">Delivery</a>
+                        <a href="#" class="show-info" data-info="delivery">Delivery</a>
                     </li>
                 </ul>
             </div>
         </footer>
     </div>
     <section id="order">
-        <div>
-            <form action="https://formspree.io/mbjrpqkd" method="POST">
+        <div id="order-checkout">
+            <p class="total">Total: <span id="total-items"></span> for <b id="total-price"></b></p>
+            <form id="order-form" action="https://formspree.io/mqkkojnp" method="POST">
                 <h2>Personal Information</h2>
-                <div>
+                <div class="input">
                     <label for="name">Full Name</label>
                     <input id="name" type="text" name="name" placeholder="i. e. John Doe" required>
                 </div>
-                <div>
+                <div class="input">
                     <label for="number">Phone</label>
-                    <input id="number" type="tel" name="phone" placeholder="required format +380 XX XXX XX XX" required>
+                    <input id="number" type="tel" name="phone" placeholder="required format +380XXXXXXXXX" pattern="\+[0-9]{12}" required>
                 </div>
                 <h2>Delivery</h2>
                 <div>
-                    <input id="post" type="radio" name="post">
+                    <input id="post" checked="checked" type="radio" name="post">
                     <label for="post">Post</label>
                 </div>
-                <div>
+                <div id="address-input" class="input">
                     <label for="address">Address</label>
                     <input id="address" type="text" name="address">
                 </div>
@@ -190,43 +191,40 @@
                     <input id="pickup" type="radio" name="post">
                     <label for="pickup">Pick-up point</label>
                 </div>
+                <div id="pick-info">
+                    Lviv, 10/11, Some address, apt.11
+                </div>
+                <textarea id="order-info" name="order-info"></textarea>
                 <button type="submit" class="primary">Checkout</button>
             </form>
         </div>
-        <div>
-            <div>
-                <h2>Items</h2>
-                <div>
-                    <span>Continue Shopping</span>
-                </div>
-            </div>
-            <div>
-                <div>
-                    <div>
-                        <img style="width: 30px; height: 30px;" src="img/magnet.jpg" alt="Item">
-                    </div>
-                    <div>art. 101022</div>
-                    <div>
-                        <button type="button"><img src="img/delete.png" alt="Delete"></button>
-                    </div>
-                    <div>
-                        <input type="number">
-                    </div>
-                    <div>
-                        $10.00
-                    </div>
-                </div>
-                <div>
-                    <div>
-                        <button type="button" class="primary">Change Items</button>
-                    </div>
-                    <div>Total $150</div>
-                </div>
-            </div>
-            <div>
-                <button type="button" class="primary">Proceed to checkout</button>
+    </section>
+    <div id="order-overlay"></div>
+    <div id="modal">
+        <div id="modal-content">
+            <div id="modal-content-inner"></div>
+             <div id="modal-buttons">
+                <button class="primary">Close</button>
             </div>
         </div>
-    </section>
+    </div>
+    <div id="about-us" class="info">
+        <h2>About us</h2>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Iaculis at erat pellentesque adipiscing commodo elit. Sed egestas egestas fringilla phasellus. Ullamcorper sit amet risus nullam eget felis eget. Tincidunt arcu non sodales neque sodales ut etiam. Nec feugiat in fermentum posuere urna nec tincidunt. Euismod quis viverra nibh cras pulvinar mattis. Aenean sed adipiscing diam donec adipiscing. Pellentesque habitant morbi tristique senectus et netus et malesuada fames. Nibh sit amet commodo nulla facilisi nullam vehicula ipsum a. Non nisi est sit amet facilisis magna etiam tempor orci. Vestibulum morbi blandit cursus risus at ultrices. Sit amet justo donec enim diam vulputate ut. Arcu bibendum at varius vel pharetra vel turpis nunc.
+        </p>
+    </div>
+    <div id="payment" class="info">
+        <h2>Payment</h2>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Iaculis at erat pellentesque adipiscing commodo elit. Sed egestas egestas fringilla phasellus. Ullamcorper sit amet risus nullam eget felis eget. Tincidunt arcu non sodales neque sodales ut etiam. Nec feugiat in fermentum posuere urna nec tincidunt. Euismod quis viverra nibh cras pulvinar mattis. Aenean sed adipiscing diam donec adipiscing. Pellentesque habitant morbi tristique senectus et netus et malesuada fames. Nibh sit amet commodo nulla facilisi nullam vehicula ipsum a. Non nisi est sit amet facilisis magna etiam tempor orci. Vestibulum morbi blandit cursus risus at ultrices. Sit amet justo donec enim diam vulputate ut. Arcu bibendum at varius vel pharetra vel turpis nunc.
+        </p>
+    </div>
+    <div id="delivery" class="info">
+        <h2>Delivery</h2>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Iaculis at erat pellentesque adipiscing commodo elit. Sed egestas egestas fringilla phasellus. Ullamcorper sit amet risus nullam eget felis eget. Tincidunt arcu non sodales neque sodales ut etiam. Nec feugiat in fermentum posuere urna nec tincidunt. Euismod quis viverra nibh cras pulvinar mattis. Aenean sed adipiscing diam donec adipiscing. Pellentesque habitant morbi tristique senectus et netus et malesuada fames. Nibh sit amet commodo nulla facilisi nullam vehicula ipsum a. Non nisi est sit amet facilisis magna etiam tempor orci. Vestibulum morbi blandit cursus risus at ultrices. Sit amet justo donec enim diam vulputate ut. Arcu bibendum at varius vel pharetra vel turpis nunc.
+        </p>
+    </div>
 </body>
 </html>
